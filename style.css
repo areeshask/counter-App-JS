@@ -1,0 +1,136 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+/* App Container */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  height: 450px; /* fixed height to prevent resizing */
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.6s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2rem;
+  color: #333;
+}
+#display{
+  padding: 8px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Display Number */
+#display h1 {
+  font-size: 4rem;
+  transition: color 0.4s ease;
+  margin: 20px 0;
+}
+
+/* Status Text */
+#text {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#text h2 {
+  font-size: 1rem;
+  color: #444;
+  background: #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:nth-of-type(1) {
+  background-color: #26b62a;
+  color: white;
+}
+
+button:nth-of-type(2) {
+  background-color: #f03528;
+  color: white;
+}
+
+button:nth-of-type(3) {
+  background-color: #0a82e4;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  #display h1 {
+    font-size: 3rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+}
